@@ -45,7 +45,7 @@ jobs:
         run: dotnet publish src/AuthHelper/AuthHelper.csproj -o out/windows -r win10-x64 --self-contained true -p:PublishSingleFile=true
       - name: Upload artifacts Windows
         if: ${{ github.event_name == 'push'}}
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: AuthHelper-windows
           path: out/windows/AuthHelper.exe
